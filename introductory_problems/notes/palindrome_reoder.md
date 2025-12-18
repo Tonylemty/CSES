@@ -39,13 +39,13 @@ int main() {
         cout << "NO SOLUTION\n";
     } else {
         for (char c = 'A'; c <= 'Z'; c++) { // 印左邊
-            cout << string(count[c] / 2, c);
+            cout << string(count[c] / 2, c); // string (size_t n, char c) -> 輸出 n 個連續字元 c
         }
         if (odds) {
             cout << center;
         }
         for (char c = 'Z'; c >= 'A'; c--) { // 印右邊
-            cout << string(count[c] / 2, c);
+            cout << string(count[c] / 2, c); 
         }
         cout << "\n";
     }
