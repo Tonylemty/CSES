@@ -13,16 +13,16 @@ int main() {
     gray.push_back("1");
 
 
-    for (int i = 2; i <= n; i++) {
+    for (int i = 2; i <= n; i++) { // 每一圈把 i - 1 位元的 gray code 變為 i 位元
         vector<string> temp = gray;
-        reverse(temp.begin(), temp.end());
+        reverse(temp.begin(), temp.end()); // 反轉
 
         for (string &s : gray) {
             s = "0" + s;
         }
 
         for (string s : temp) {
-            gray.push_back("1" + s);
+            gray.push_back("1" + s); // 再加一，可以確保相鄰只差一位元
         }
     }
 
