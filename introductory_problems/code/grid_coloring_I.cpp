@@ -18,8 +18,8 @@ int main() {
             for (char ch = 'A'; ch <= 'D'; ch++) {
                 bool fail = false;
                 if (grid[r][c] == ch) fail = true;
-                if (c > 0 && grid[r][c - 1] == ch) fail = true;
-                if (r > 0 && grid[r - 1][c] == ch) fail = true;
+                if (c > 0 && grid[r][c - 1] == ch) fail = true; // c > 0 確保左邊那格存在
+                if (r > 0 && grid[r - 1][c] == ch) fail = true; // r > 0 確保上面那格存在
                 if (!fail) {
                     grid[r][c] = ch;
                     break;
