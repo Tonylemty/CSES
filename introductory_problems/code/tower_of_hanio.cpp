@@ -3,7 +3,7 @@ using namespace std;
 
 vector<pair<int, int>> moves;
 void hanoi(int n, int a, int b, int c) {
-    if (n == 1) {
+    if (n == 1) { // 當 n = 1 時，可直接將 disk 移到第三根柱子
         moves.emplace_back(a, c);
     } else {
         hanoi(n - 1, a, c, b);
