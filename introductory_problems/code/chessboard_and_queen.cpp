@@ -22,10 +22,11 @@ void dfs(int r) {
         int d2 = r - c + 7; // 副對角線
         if (colUsed[c] || diag1Used[d1] || diag2Used[d2]) continue;
 
-        // 放入
+        // 嘗試將皇后放置在 (r, c)
         colUsed[c] = diag1Used[d1] = diag2Used[d2] = true;
         dfs(r + 1);
-        // 不放入
+        // 撤銷剛剛的放置，恢復狀態以嘗試其他位置
+        // 要注意的是不是選 or 不選
         colUsed[c] = diag1Used[d1] = diag2Used[d2] = false;
     }
 
