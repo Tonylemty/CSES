@@ -13,3 +13,34 @@
 
 ### 問題點
 * 不知道 XOR 條件滿足 mex 的條件
+
+### 官方解答
+```cpp
+// 直接構造矩陣
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    vector<vector<int>> grid(n, vector<int>(n));
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            vector<bool> seen(2 * n, false);
+            for (int r = 0; r < i; r++) seen[grid[r][j]] = true;
+            for (int c = 0; c < j; c++) seen[grid[i][c]] = true;
+
+            int m = 0;
+            while (m < (int)seen.size() && seen[m]) m++;
+            grid[i][j] = m;
+            cout << grid[i][j] << (j + 1 == n ? '\n' : ' ');
+        }
+    }    
+    return 0;
+}
+```
