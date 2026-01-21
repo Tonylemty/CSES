@@ -18,6 +18,7 @@ void dfs(int step, int x, int y) {
         return;
     }
 
+    // 將邊界作為牆來處理，所以遇到邊界，相當於被堵住
     bool up = (x-1 < 0 || visited[x-1][y]);
     bool down = (x+1 >= 7 || visited[x+1][y]);
     bool left = (y-1 < 0 || visited[x][y-1]);
