@@ -20,8 +20,8 @@ int main() {
     }
     sort(events.begin(), events.end());
 
-    int cur = 0;
-    int ans = 0;
+    int cur = 0; // 當下餐聽內人數
+    int ans = 0; // 歷史最大人數
     for (auto &e : events) {
         cur += e.second;
         ans = max(ans, cur);
