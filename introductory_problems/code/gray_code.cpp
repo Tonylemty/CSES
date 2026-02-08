@@ -9,6 +9,7 @@ int main() {
     cin >> n;
 
     vector<string> gray;
+    // 先建立最基本的 1-bit 格雷碼
     gray.push_back("0");
     gray.push_back("1");
 
@@ -17,12 +18,12 @@ int main() {
         vector<string> temp = gray;
         reverse(temp.begin(), temp.end()); // 反轉
 
-        for (string &s : gray) {
+        for (string &s : gray) { // 在原格雷碼前面加 0
             s = "0" + s;
         }
 
         for (string s : temp) {
-            gray.push_back("1" + s); // 再加一，可以確保相鄰只差一位元
+            gray.push_back("1" + s); // 對反轉後的格雷碼前面加一，可以確保相鄰只差一位元
         }
     }
 
