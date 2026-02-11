@@ -4,8 +4,8 @@ using namespace std;
 string s;
 int ans = 0;
 bool visited[7][7] = {false};
-int dx[4] = {-1, 1, 0, 0};
-int dy[4] = {0, 0, -1, 1};
+int dx[4] = {-1, 1, 0, 0}; // row
+int dy[4] = {0, 0, -1, 1}; // column
 char dir[4] = {'U', 'D', 'L', 'R'};
 
 void dfs(int step, int x, int y) {
