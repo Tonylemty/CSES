@@ -5,7 +5,7 @@
 ### 核心概念
 * 補數搜尋：
   不是在「找區間」，而是在「找過去的紀錄」
-  * 定義前綴和：$prefix \_ sum[i] = a_1 + a_2 + ... + a_n$
+  * 定義前綴和：$prefix \_ sum[i] = a_1 + a_2 + ... + a_i$
   * 轉換公式：
     我們要找 $prefix \_ sum[current] - prefix \_ sum[past] = x$
     等同於找 $prefix \_ sum[past] = prefix \_ sum[current] - x$
