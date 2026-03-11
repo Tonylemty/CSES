@@ -5,7 +5,7 @@
 * 子陣列與前綴和的轉換：
   任何連續子陣列的和，都可以看作是兩個「前綴和」的差。
   $$ \text{SubarraySum}(i, j) = S[j] - S[i - 1]$$
-  * $S[i]$：從開頭到目前的總和
+  * $S[j]$：從開頭到目前的總和
   * $S[i-1]$：之前某個點的總和
 * 同餘定理：
   * 題目要求 $\text{SubarraySum} \pmod n = 0$，代入公式：$$(S[j] - S[i-1]) \pmod n = 0 \implies S[j] \pmod n = S[i-1] \pmod n$$
